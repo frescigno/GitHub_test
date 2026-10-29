@@ -3,7 +3,7 @@ COMMENT = '#'
 climate_data = open('data/sc_climate_data_10.csv', 'r')
 
 
-def FahrToCelsius(fahr):
+def fahrtocelsius(fahr):
     """COnverts fahrenehit to celsius
 
     Args:
@@ -24,6 +24,6 @@ for line in climate_data:
     data = line.split(',')
     if data[0][0] != COMMENT:
         fahr = float(data[3])
-        celsius = FahrToCels(fahr)
+        celsius = fahrtocelsius(fahr)
         kelvin = FahrToKelvin(fahr)
         print('Max temperature in Celsius', celsius, 'Kelvin', kelvin)
